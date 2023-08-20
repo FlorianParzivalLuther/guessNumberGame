@@ -18,16 +18,28 @@ document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value); //otherwise it retrieves in a string
   console.log(guess, typeof guess);
 
+  //cleanup code
+
+  const displayMessage = function (message) {
+    document.querySelector('.message').textContent = message;
+  };
+
+  function reloadPage() {
+    location.reload();
+  }
+
   //checking if guess is litteler than 1 or bigger as the maximum
   if (!guess || guess < 1 || guess > maximum) {
-    document.querySelector('.message').textContent =
-      'this is not a valid number!🚧';
+    // document.querySelector('.message').textContent =
+    //   'this is not a valid number!🚧';
+    displayMessage('this is not a valid number!🚧');
     --counter;
     document.querySelector('.counterscore').textContent = counter;
   }
   //if the guess is right!
   else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = 'you won!🌈';
+    // document.querySelector('.message').textContent = 'you won!🌈';
+    displayMessage('you won!🌈');
     document.querySelector('body').style.backgroundColor = 'pink';
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('.check').id = 'hiding';
@@ -47,12 +59,9 @@ document.querySelector('.check').addEventListener('click', function () {
 
   //if the counter is litteler than 0 -> game over!
   if (counter < 1) {
-    document.querySelector('.message').textContent = 'you loose 🪦';
+    // document.querySelector('.message').textContent = 'you loose 🪦';
+    displayMessage('you loose 🪦');
     document.querySelector('.check').id = 'hiding';
     setInterval(reloadPage, 1500);
   }
 });
-
-function reloadPage() {
-  location.reload();
-}
