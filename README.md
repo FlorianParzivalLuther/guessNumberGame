@@ -9,6 +9,7 @@ A simple "Guess My Number" game implemented in HTML, CSS, and JavaScript.
   - [Description](#description)
   - [Preview](#preview)
   - [Getting Started](#getting-started)
+    - [Clone the Repository](#clone-the-repository)
 
 ## Description
 
@@ -20,6 +21,13 @@ This is a basic "Guess My Number" game where the user tries to guess a randomly 
 
 ## Getting Started
 
-1. Clone the repository:
-   Fork
-   Clone : https://github.com/FlorianParzivalLuther/guessNumberGame.git
+### Clone the Repository
+
+To get started, fork and then clone the repository using the following command:
+
+```sh
+git clone https://github.com/FlorianParzivalLuther/guessNumberGame.git
+
+
+
+
