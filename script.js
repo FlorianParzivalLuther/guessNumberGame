@@ -10,9 +10,7 @@ console.log(`This is the secret Number: ${secretNumber}`);
 
 document.querySelector('.number').textContent = '?';
 
-document.querySelector('.again').addEventListener('click', function () {
-  reloadPage();
-});
+
 //event listener via button click!
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value); //otherwise it retrieves in a string
@@ -28,6 +26,11 @@ document.querySelector('.check').addEventListener('click', function () {
     location.reload();
   }
 
+
+
+  document.querySelector('.again').addEventListener('click', function () {
+    reloadPage();
+  });
   //checking if guess is litteler than 1 or bigger as the maximum
   if (!guess || guess < 1 || guess > maximum) {
     // document.querySelector('.message').textContent =
@@ -43,6 +46,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('body').style.backgroundColor = 'pink';
     document.querySelector('.number').textContent = secretNumber;
     document.querySelector('.check').id = 'hiding';
+    
     setInterval(reloadPage, 2000);
   }
   //if the guess is wrong
