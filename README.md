@@ -2,10 +2,9 @@
 
 A simple "Guess My Number" game implemented in HTML, CSS, and JavaScript.
 
-## Table of Contents
+
 
 - [Guess My Number Game](#guess-my-number-game)
-  - [Table of Contents](#table-of-contents)
   - [Description](#description)
   - [Preview](#preview)
     - [Clone the Repository](#clone-the-repository)
